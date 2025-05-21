@@ -2,32 +2,21 @@ form {
     background-color: #FFCC66; 
     box-sizing: border-box;
     display: grid;
-    margin: 1rem auto;
-    padding-top: 1rem;
+    /* margin: 1rem auto; */
+    padding: 1rem;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     gap: 1rem;
     padding-bottom: 1rem;
     justify-items: center;
     }
+  
 
-form > div{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}    
 
-input {
-    /* padding-left: 5rem ; */
-    padding-right: 1rem ;
-}
-
-label {
+.select-option {
     width: 100%;
-    /* background-color: azure; */
-    text-align: start;
-    align-self: self-start;
 }
+
 
 .profile {
     width: 609px;
@@ -127,7 +116,7 @@ label {
 
 
 .future {
-    margin: 0.2rem 3px 0px 2px;
+    margin: 1rem 3px 0px 2px;
     padding-left: 1rem;
     /* background-color: aqua; */
     display: grid;
@@ -168,5 +157,9 @@ label {
 @media screen and (max-width: 768px){
     form {
         grid-template-columns: 1fr;
+    }
+
+    .future {
+        margin-top: 0.2rem;
     }
 }

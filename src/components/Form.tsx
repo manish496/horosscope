@@ -2,12 +2,21 @@ import { useState, useRef } from "react";
 import * as htmltoImage from 'html-to-image';
 import './Form.css';
 import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+
+// imports
+import Dinanka from './Drops/Dinanka';
+import samvathsara from './Drops/samvathsara';
+import Thiti from './Drops/Thiti';
+import Zodiac from "./Drops/Zodia";
+import Stars from "./Drops/Star";
+import Bhavishya from "./Drops/RashiFuture";
 
 export const Form = () => {
 
     const divRef = useRef<HTMLDivElement>(null);
-    const [ದಿನಾಂಕ, setದಿನಾಂಕ] = useState('');
-    const [ಸಂವತ್ಸರ, setಸಂವತ್ಸರ] = useState('');
+    const [ದಿನಾಂಕ, setದಿನಾಂಕ] = useState<string | null>(null);
+    const [ಸಂವತ್ಸರ, setಸಂವತ್ಸರ] = useState<string | null>(null);
     const [ಅಯನಂ, setಅಯನಂ] = useState('');
     const [ಋತು, setಋತು] = useState('');
     const [ಮಾಸ, setಮಾಸ] = useState('');
@@ -20,22 +29,22 @@ export const Form = () => {
     const [ರಾಹುಕಾಲ, setರಾಹುಕಾಲ] = useState('');
     const [ಗುಳಿಕಕಾಲ, setಗುಳಿಕಕಾಲ] = useState('');
     const [ಯಮಗಂಡ, setಯಮಗಂಡ] = useState('');
-    const [ತಿಥಿ, setತಿಥಿ] = useState('');
-    const [ರಾಶಿ, setರಾಶಿ] = useState('');
-    const [ನಕ್ಷತ್ರ, setನಕ್ಷತ್ರ] = useState('');
-    const [ಲಗ್ನ, setಲಗ್ನ] = useState('');
-    const [ಮೇಷ, setಮೇಷ] = useState('');
-    const [ಮಿಥುನ, setಮಿಥುನ] = useState('');
-    const [ಸಿಂಹ, setಸಿಂಹ] = useState('');
-    const [ತುಲಾ, setತುಲಾ] = useState('');
-    const [ಧನು, setಧನು] = useState('');
-    const [ಕುಂಭ, setಕುಂಭ] = useState('');
-    const [ವೃಷಭ, setವೃಷಭ] = useState('');
-    const [ಕರ್ಕಾಟಕ, setಕರ್ಕಾಟಕ] = useState('');
-    const [ಕನ್ಯಾ, setಕನ್ಯಾ] = useState('');
-    const [ವೃಶ್ಚಿಕ, setವೃಶ್ಚಿಕ] = useState('');
-    const [ಮಕರ, setಮಕರ] = useState('');
-    const [ಮೀನ, setಮೀನ] = useState('');
+    const [ತಿಥಿ, setತಿಥಿ] =  useState<string | null>(null);
+    const [ರಾಶಿ, setರಾಶಿ] =  useState<string | null>(null);
+    const [ನಕ್ಷತ್ರ, setನಕ್ಷತ್ರ] =  useState<string | null>(null);
+    const [ಲಗ್ನ, setಲಗ್ನ] =  useState<string | null>(null);
+    const [ಮೇಷ, setಮೇಷ] =  useState<string | null>(null);
+    const [ಮಿಥುನ, setಮಿಥುನ] =  useState<string | null>(null);
+    const [ಸಿಂಹ, setಸಿಂಹ] =  useState<string | null>(null);
+    const [ತುಲಾ, setತುಲಾ] =  useState<string | null>(null);
+    const [ಧನು, setಧನು] =  useState<string | null>(null);
+    const [ಕುಂಭ, setಕುಂಭ] =  useState<string | null>(null);
+    const [ವೃಷಭ, setವೃಷಭ] =  useState<string | null>(null);
+    const [ಕರ್ಕಾಟಕ, setಕರ್ಕಾಟಕ] =  useState<string | null>(null);
+    const [ಕನ್ಯಾ, setಕನ್ಯಾ] =  useState<string | null>(null);
+    const [ವೃಶ್ಚಿಕ, setವೃಶ್ಚಿಕ] =  useState<string | null>(null);
+    const [ಮಕರ, setಮಕರ] =  useState<string | null>(null);
+    const [ಮೀನ, setಮೀನ] =  useState<string | null>(null);
 
 
     const convertPng = () => {
@@ -89,107 +98,95 @@ export const Form = () => {
         <div>
             <form onSubmit={handleChange}>
                 
-                {/* <label htmlFor="username">ದಿನಾಂಕ</label> */}
-                {/* <input type="text" id="username"  value={ದಿನಾಂಕ} onChange={(e) => setದಿನಾಂಕ(e.target.value)}/> */}
-                <TextField  id="username"  value={ದಿನಾಂಕ} onChange={(e) => setದಿನಾಂಕ(e.target.value)} variant="outlined" label="ದಿನಾಂಕ"/>
 
-                {/* <label htmlFor="username">ಸಂವತ್ಸರ</label> */}
-                {/* <input type="text" id="username"  value={ಸಂವತ್ಸರ} onChange={(e) => setಸಂವತ್ಸರ(e.target.value)}/> */}
-                <TextField type="text" id="username"  value={ಸಂವತ್ಸರ} onChange={(e) => setಸಂವತ್ಸರ(e.target.value)} variant="outlined" label="ಸಂವತ್ಸರ"/>   
+                {/* <TextField  id="username"  value={ದಿನಾಂಕ} onChange={(e) => setದಿನಾಂಕ(e.target.value)} variant="outlined" label="ದಿನಾಂಕ"/> */}
+                <Autocomplete className="select-option" options={Dinanka} value={ದಿನಾಂಕ} onChange={(_, newValue: string | null) => setದಿನಾಂಕ(newValue)} renderInput={(params) => <TextField {...params} label="ದಿನಾಂಕ" />} />    
 
-                {/* <label htmlFor="username">ಅಯನಂ</label> */}
-                {/* <input type="text" id="username"  value={ಅಯನಂ} onChange={(e) => setಅಯನಂ(e.target.value)}/> */}
-                <TextField type="text" id="username"  value={ಅಯನಂ} onChange={(e) => setಅಯನಂ(e.target.value)} variant="outlined" label="ಅಯನಂ"/>
-
-                {/* <label htmlFor="username">ಋತು</label> */}
-                {/* <input type="text" id="username"  value={ಋತು} onChange={(e) => setಋತು(e.target.value)}/> */}
-                <TextField type="text" id="username"  value={ಋತು} onChange={(e) => setಋತು(e.target.value)} variant="outlined" label="ಋತು"/>
-
-                {/* <label htmlFor="username">ಮಾಸ</label> */}
-                {/* <input type="text" id="username"  value={ಮಾಸ} onChange={(e) => setಮಾಸ(e.target.value)}/> */}
-                <TextField type="text" id="username"  value={ಮಾಸ} onChange={(e) => setಮಾಸ(e.target.value)} variant="outlined" label="ಮಾಸ"/>
-
-                {/* <label htmlFor="username">ಪಕ್ಷ</label> */}
-                {/* <input type="text" id="username"  value={ಪಕ್ಷ} onChange={(e) => setಪಕ್ಷ(e.target.value)}/> */}
-                <TextField type="text" id="username"  value={ಪಕ್ಷ} onChange={(e) => setಪಕ್ಷ(e.target.value)} variant="outlined" label="ಪಕ್ಷ"/>
                 
-                {/* <label htmlFor="username">ಸೂರ್ಯೋದಯ (Time in AM)</label> */}
-                <TextField type="text" id="username"  value={ಸೂರ್ಯೋದಯ} onChange={(e) => setಸೂರ್ಯೋದಯ(e.target.value)} variant="outlined" label="ಸೂರ್ಯೋದಯ"/>
+                {/* <TextField type="text" id="username"  value={ಸಂವತ್ಸರ} onChange={(e) => setಸಂವತ್ಸರ(e.target.value)} variant="outlined" label="ಸಂವತ್ಸರ"/>  */}
+                <Autocomplete className="select-option" options={samvathsara} value={ಸಂವತ್ಸರ} onChange={(_, sam: string | null) => setಸಂವತ್ಸರ(sam)} renderInput={(params) => <TextField {...params} label="ಸಂವತ್ಸರ" />} />    
+      
+
                
-                {/* <label htmlFor="username">ಸೂರ್ಯಾಸ್ತ(Time in PM)</label> */}
-                <TextField type="text" id="username"  value={ಸೂರ್ಯಾಸ್ತ} onChange={(e) => setಸೂರ್ಯಾಸ್ತ(e.target.value)} variant="outlined" label="ಸೂರ್ಯಾಸ್ತ"/>
+                <TextField type="text" fullWidth id="username"  value={ಅಯನಂ} onChange={(e) => setಅಯನಂ(e.target.value)} variant="outlined" label="ಅಯನಂ" sx={{width:"100%"}}/>
+
+                <TextField type="text" fullWidth id="username"  value={ಋತು} onChange={(e) => setಋತು(e.target.value)} variant="outlined" label="ಋತು"/>
+
                
-                {/* <label htmlFor="username">ಚಂದ್ರನ ಉದಯ(Time in AM)</label> */}
-                <TextField type="text" id="username"  value={ಚಂದ್ರನಉದಯ} onChange={(e) => setಚಂದ್ರನಉದಯ(e.target.value)} variant="outlined" label="ಚಂದ್ರನ ಉದಯ" />
+                <TextField type="text" fullWidth id="username"  value={ಮಾಸ} onChange={(e) => setಮಾಸ(e.target.value)} variant="outlined" label="ಮಾಸ"/>
+
+      
+                <TextField type="text" fullWidth id="username"  value={ಪಕ್ಷ} onChange={(e) => setಪಕ್ಷ(e.target.value)} variant="outlined" label="ಪಕ್ಷ"/>
                 
-                {/* <label htmlFor="username">ಚಂದ್ರಸ್ತ (Time in PM)</label> */}
-                {/* <input type="text" id="username"  value={ಚಂದ್ರಸ್ತ} onChange={(e) => setಚಂದ್ರಸ್ತ(e.target.value)} variant="outlined"/> */}
+     
+                <TextField type="text" fullWidth id="username"  value={ಸೂರ್ಯೋದಯ} onChange={(e) => setಸೂರ್ಯೋದಯ(e.target.value)} variant="outlined" label="ಸೂರ್ಯೋದಯ"/>
+               
+                <TextField type="text" fullWidth id="username"  value={ಸೂರ್ಯಾಸ್ತ} onChange={(e) => setಸೂರ್ಯಾಸ್ತ(e.target.value)} variant="outlined" label="ಸೂರ್ಯಾಸ್ತ"/>
+               
                 
-                {/* <label htmlFor="username">ಶುಭ ಸಮಯ (Time in AM)</label> */}
-                <TextField type="text" id="username"  value={ಶುಭಸಮಯ} onChange={(e) => setಶುಭಸಮಯ(e.target.value)} variant="outlined" label="ಶುಭಸಮಯ" />
+                <TextField type="text" fullWidth id="username"  value={ಚಂದ್ರನಉದಯ} onChange={(e) => setಚಂದ್ರನಉದಯ(e.target.value)} variant="outlined" label="ಚಂದ್ರನ ಉದಯ" />
                 
-                {/* <label htmlFor="username">ರಾಹುಕಾಲ (Time in PM)</label> */}
-                <TextField type="text" id="username"  value={ರಾಹುಕಾಲ} onChange={(e) => setರಾಹುಕಾಲ(e.target.value)} variant="outlined" label="ರಾಹುಕಾಲ" />
+     
+                <TextField type="text" fullWidth id="username"  value={ಶುಭಸಮಯ} onChange={(e) => setಶುಭಸಮಯ(e.target.value)} variant="outlined" label="ಶುಭಸಮಯ" />
+             
+                <TextField type="text" fullWidth id="username"  value={ರಾಹುಕಾಲ} onChange={(e) => setರಾಹುಕಾಲ(e.target.value)} variant="outlined" label="ರಾಹುಕಾಲ" />
               
-                {/* <label htmlFor="username">ಗುಳಿಕಕಾಲ</label> */}
-                <TextField type="text" id="username"  value={ಗುಳಿಕಕಾಲ} onChange={(e) => setಗುಳಿಕಕಾಲ(e.target.value)} variant="outlined" label="ಗುಳಿಕಕಾಲ" />
+                <TextField type="text" fullWidth id="username"  value={ಗುಳಿಕಕಾಲ} onChange={(e) => setಗುಳಿಕಕಾಲ(e.target.value)} variant="outlined" label="ಗುಳಿಕಕಾಲ" />
                
-                {/* <label htmlFor="username">ಯಮಗಂಡ</label> */}
-                <TextField type="text" id="username"  value={ಯಮಗಂಡ} onChange={(e) => setಯಮಗಂಡ(e.target.value)} variant="outlined" label="ಯಮಗಂಡ" />
                
-                {/* <label htmlFor="username">ತಿಥಿ</label> */}
-                <TextField type="text" id="username"  value={ತಿಥಿ} onChange={(e) => setತಿಥಿ(e.target.value)} variant="outlined" label="ತಿಥಿ" />
+                <TextField type="text" fullWidth id="username"  value={ಯಮಗಂಡ} onChange={(e) => setಯಮಗಂಡ(e.target.value)} variant="outlined" label="ಯಮಗಂಡ" />
                
-                {/* <label htmlFor="username">ರಾಶಿ</label> */}
-                <TextField type="text" id="username"  value={ರಾಶಿ} onChange={(e) => setರಾಶಿ(e.target.value)} variant="outlined" label="ರಾಶಿ" />
+          
+                {/* <TextField type="text" id="username"  value={ತಿಥಿ} onChange={(e) => setತಿಥಿ(e.target.value)} variant="outlined" label="ತಿಥಿ" /> */}
+               <Autocomplete className="select-option" options={Thiti} value={ತಿಥಿ} onChange={(_, sam: string | null) => setತಿಥಿ(sam)} renderInput={(params) => <TextField {...params} label="ತಿಥಿ" />}/>
+             
+                {/* <TextField type="text" id="username"  value={ರಾಶಿ} onChange={(e) => setರಾಶಿ(e.target.value)} variant="outlined" label="ರಾಶಿ" /> */}
+               <Autocomplete className="select-option" options={Zodiac} value={ರಾಶಿ} onChange={(_, sam: string | null) => setರಾಶಿ(sam)} renderInput={(params) => <TextField {...params} label="ರಾಶಿ" />}/>
 
                 
-                {/* <label htmlFor="username">ನಕ್ಷತ್ರ</label> */}
-                <TextField type="text" id="username"  value={ನಕ್ಷತ್ರ} onChange={(e) => setನಕ್ಷತ್ರ(e.target.value)} variant="outlined" label="ನಕ್ಷತ್ರ" />
+                {/* <TextField type="text" id="username"  value={ನಕ್ಷತ್ರ} onChange={(e) => setನಕ್ಷತ್ರ(e.target.value)} variant="outlined" label="ನಕ್ಷತ್ರ" /> */}
+               <Autocomplete className="select-option" options={Stars} value={ನಕ್ಷತ್ರ} onChange={(_, sam: string | null) => setನಕ್ಷತ್ರ(sam)} renderInput={(params) => <TextField {...params} label="ನಕ್ಷತ್ರ" />}/>
 
-                
-                {/* <label htmlFor="username">ಲಗ್ನ</label> */}
-                <TextField type="text" id="username"  value={ಲಗ್ನ} onChange={(e) => setಲಗ್ನ(e.target.value)} variant="outlined" label="ಲಗ್ನ" />
-                
-                
-                
-                {/* <label htmlFor="username">ಮೇಷ</label> */}
-                <TextField type="text" id="username"  value={ಮೇಷ} onChange={(e) => setಮೇಷ(e.target.value)} variant="outlined" label="ಮೇಷ" />
+
+                <TextField type="text" fullWidth id="username"  value={ಲಗ್ನ} onChange={(e) => setಲಗ್ನ(e.target.value)} variant="outlined" label="ಲಗ್ನ" />
+
+                {/* <TextField type="text" id="username"  value={ಮೇಷ} onChange={(e) => setಮೇಷ(e.target.value)} variant="outlined" label="ಮೇಷ" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ಮೇಷ} onChange={(_, sam: string | null) => setಮೇಷ(sam)} renderInput={(params) => <TextField {...params} label="ಮೇಷ" />}/>
               
-                {/* <label htmlFor="username">ಮಿಥುನ</label> */}
-                <TextField type="text" id="username"  value={ಮಿಥುನ} onChange={(e) => setಮಿಥುನ(e.target.value)} variant="outlined" label="ಮಿಥುನ" />
+                {/* <TextField type="text" id="username"  value={ಮಿಥುನ} onChange={(e) => setಮಿಥುನ(e.target.value)} variant="outlined" label="ಮಿಥುನ" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ಮಿಥುನ} onChange={(_, sam: string | null) => setಮಿಥುನ(sam)} renderInput={(params) => <TextField {...params} label="ಮಿಥುನ" />}/>
               
-                {/* <label htmlFor="username">ಸಿಂಹ</label> */}
-                <TextField type="text" id="username"  value={ಸಿಂಹ} onChange={(e) => setಸಿಂಹ(e.target.value)} variant="outlined" label="ಸಿಂಹ" />
+                {/* <TextField type="text" id="username"  value={ಸಿಂಹ} onChange={(e) => setಸಿಂಹ(e.target.value)} variant="outlined" label="ಸಿಂಹ" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ಸಿಂಹ} onChange={(_, sam: string | null) => setಸಿಂಹ(sam)} renderInput={(params) => <TextField {...params} label="ಸಿಂಹ" />}/>
                
-                {/* <label htmlFor="username">ತುಲಾ</label> */}
-                <TextField type="text" id="username"  value={ತುಲಾ} onChange={(e) => setತುಲಾ(e.target.value)} variant="outlined" label="ತುಲಾ" />
+                {/* <TextField type="text" id="username"  value={ತುಲಾ} onChange={(e) => setತುಲಾ(e.target.value)} variant="outlined" label="ತುಲಾ" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ತುಲಾ} onChange={(_, sam: string | null) => setತುಲಾ(sam)} renderInput={(params) => <TextField {...params} label="ತುಲಾ" />}/>
                
-                {/* <label htmlFor="username">ಧನು</label> */}
-                <TextField type="text" id="username"  value={ಧನು} onChange={(e) => setಧನು(e.target.value)} variant="outlined" label="ಧನು" />
+                {/* <TextField type="text" id="username"  value={ಧನು} onChange={(e) => setಧನು(e.target.value)} variant="outlined" label="ಧನು" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ಧನು} onChange={(_, sam: string | null) => setಧನು(sam)} renderInput={(params) => <TextField {...params} label="ಧನು" />}/>
                
-                {/* <label htmlFor="username">ಕುಂಭ</label> */}
-                <TextField type="text" id="username"  value={ಕುಂಭ} onChange={(e) => setಕುಂಭ(e.target.value)} variant="outlined" label="ಕುಂಭ" />
+                {/* <TextField type="text" id="username"  value={ಕುಂಭ} onChange={(e) => setಕುಂಭ(e.target.value)} variant="outlined" label="ಕುಂಭ" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ಕುಂಭ} onChange={(_, sam: string | null) => setಕುಂಭ(sam)} renderInput={(params) => <TextField {...params} label="ಕುಂಭ" />}/>
                 
                
                 
-                {/* <label htmlFor="username">ವೃಷಭ</label> */}
-                <TextField type="text" id="username"  value={ವೃಷಭ} onChange={(e) => setವೃಷಭ(e.target.value)} variant="outlined" label="ವೃಷಭ" />
+                {/* <TextField type="text" id="username"  value={ವೃಷಭ} onChange={(e) => setವೃಷಭ(e.target.value)} variant="outlined" label="ವೃಷಭ" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ವೃಷಭ} onChange={(_, sam: string | null) => setವೃಷಭ(sam)} renderInput={(params) => <TextField {...params} label="ವೃಷಭ" />}/>
                 
-                {/* <label htmlFor="username">ಕರ್ಕಾಟಕ</label> */}
-                <TextField type="text" id="username"  value={ಕರ್ಕಾಟಕ} onChange={(e) => setಕರ್ಕಾಟಕ(e.target.value)} variant="outlined" label="ಕರ್ಕಾಟಕ" />
+                {/* <TextField type="text" id="username"  value={ಕರ್ಕಾಟಕ} onChange={(e) => setಕರ್ಕಾಟಕ(e.target.value)} variant="outlined" label="ಕರ್ಕಾಟಕ" /> */}
+               <Autocomplete className="select-option" options={Bhavishya} value={ಕರ್ಕಾಟಕ} onChange={(_, sam: string | null) => setಕರ್ಕಾಟಕ(sam)} renderInput={(params) => <TextField {...params} label="ಕರ್ಕಾಟಕ" />}/>
               
-                {/* <label htmlFor="username">ಕನ್ಯಾ</label> */}
-                <TextField type="text" id="username"  value={ಕನ್ಯಾ} onChange={(e) => setಕನ್ಯಾ(e.target.value)} variant="outlined" label="ಕನ್ಯಾ" />
-               
-                {/* <label htmlFor="username">ವೃಶ್ಚಿಕ</label> */}
-                <TextField type="text" id="username"  value={ವೃಶ್ಚಿಕ} onChange={(e) => setವೃಶ್ಚಿಕ(e.target.value)} variant="outlined" label="ವೃಶ್ಚಿಕ" />
+                {/* <TextField type="text" id="username"  value={ಕನ್ಯಾ} onChange={(e) => setಕನ್ಯಾ(e.target.value)} variant="outlined" label="ಕನ್ಯಾ" /> */}
+                <Autocomplete className="select-option" options={Bhavishya} value={ಕನ್ಯಾ} onChange={(_, sam: string | null) => setಕನ್ಯಾ(sam)} renderInput={(params) => <TextField {...params} label="ಕನ್ಯಾ" />}/>
+              
+                {/* <TextField type="text" id="username"  value={ವೃಶ್ಚಿಕ} onChange={(e) => setವೃಶ್ಚಿಕ(e.target.value)} variant="outlined" label="ವೃಶ್ಚಿಕ" /> */}
+                <Autocomplete className="select-option" options={Bhavishya} value={ವೃಶ್ಚಿಕ} onChange={(_, sam: string | null) => setವೃಶ್ಚಿಕ(sam)} renderInput={(params) => <TextField {...params} label="ವೃಶ್ಚಿಕ" />}/>
                 
-                {/* <label htmlFor="username">ಮಕರ</label> */}
-                <TextField type="text" id="username"  value={ಮಕರ} onChange={(e) => setಮಕರ(e.target.value)} variant="outlined" label="ಮಕರ" />
-               
-                {/* <label htmlFor="username">ಮೀನ</label> */}
-                <TextField type="text" id="username"  value={ಮೀನ} onChange={(e) => setಮೀನ(e.target.value)} variant="outlined" label="ಮೀನ" />
+                {/* <TextField type="text" id="username"  value={ಮಕರ} onChange={(e) => setಮಕರ(e.target.value)} variant="outlined" label="ಮಕರ" /> */}
+                <Autocomplete className="select-option" options={Bhavishya} value={ಮಕರ} onChange={(_, sam: string | null) => setಮಕರ(sam)} renderInput={(params) => <TextField {...params} label="ಮಕರ" />}/>
+              
+                {/* <TextField type="text" id="username"  value={ಮೀನ} onChange={(e) => setಮೀನ(e.target.value)} variant="outlined" label="ಮೀನ" /> */}
+                <Autocomplete className="select-option" options={Bhavishya} value={ಮೀನ} onChange={(_, sam: string | null) => setಮೀನ(sam)} renderInput={(params) => <TextField {...params} label="ಮೀನ" />}/>
                 
 
                
