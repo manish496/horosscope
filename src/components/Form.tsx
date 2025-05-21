@@ -250,12 +250,12 @@ export const Form = () => {
 
                 <div className="good-bad">
 
-                    <div>
+                    <div className="good">
                     <p>ಶುಭ ಸಮಯ:</p>
                     <p>{ಶುಭಸಮಯ}</p>
                     </div>
 
-                    <div>    
+                    <div className="bad">    
                     <p>ರಾಹುಕಾಲ:</p>
                     <p>{ರಾಹುಕಾಲ}</p>
                     </div>

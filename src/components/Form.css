@@ -77,11 +77,13 @@ form {
     background-color: orange;
     display: flex;
     justify-content: space-between;
-    padding-left: 2rem;
+    padding-left: 1rem;
     padding-right: 2rem;
     align-items: center;
     gap: 2rem;
 }
+
+
 
 .good-bad div {
     display: flex;
