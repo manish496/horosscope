@@ -6,7 +6,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 // imports
 import Dinanka from './Drops/Dinanka';
-import samvathsara from './Drops/samvathsara';
+import samvathsara from './Drops/Samvathsara';
 import Thiti from './Drops/Thiti';
 import Zodiac from "./Drops/Zodia";
 import Stars from "./Drops/Star";
