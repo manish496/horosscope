@@ -1,11 +1,12 @@
 form {
-    background-color: aquamarine;
+    background-color: #FFCC66; 
     box-sizing: border-box;
     display: grid;
-    margin: 0 auto;
+    margin: 1rem auto;
+    padding-top: 1rem;
     width: 100%;
-    grid-template-columns: 1fr 1fr; 
-    gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 1rem;
     padding-bottom: 1rem;
     justify-items: center;
     }
@@ -164,3 +165,8 @@ label {
 
 
 
+@media screen and (max-width: 768px){
+    form {
+        grid-template-columns: 1fr;
+    }
+}

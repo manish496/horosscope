@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import * as htmltoImage from 'html-to-image';
 import './Form.css';
+import TextField from '@mui/material/TextField';
 
 export const Form = () => {
 
@@ -87,103 +88,109 @@ export const Form = () => {
     return(
         <div>
             <form onSubmit={handleChange}>
-                <div>
-                <label htmlFor="username">ದಿನಾಂಕ</label>
-                <input type="text" id="username"  value={ದಿನಾಂಕ} onChange={(e) => setದಿನಾಂಕ(e.target.value)}/>
-
-                <label htmlFor="username">ಸಂವತ್ಸರ</label>
-                <input type="text" id="username"  value={ಸಂವತ್ಸರ} onChange={(e) => setಸಂವತ್ಸರ(e.target.value)}/>
-
-                <label htmlFor="username">ಅಯನಂ</label>
-                <input type="text" id="username"  value={ಅಯನಂ} onChange={(e) => setಅಯನಂ(e.target.value)}/>
-
-                <label htmlFor="username">ಋತು</label>
-                <input type="text" id="username"  value={ಋತು} onChange={(e) => setಋತು(e.target.value)}/>
-
-                <label htmlFor="username">ಮಾಸ</label>
-                <input type="text" id="username"  value={ಮಾಸ} onChange={(e) => setಮಾಸ(e.target.value)}/>
-
-                <label htmlFor="username">ಪಕ್ಷ</label>
-                <input type="text" id="username"  value={ಪಕ್ಷ} onChange={(e) => setಪಕ್ಷ(e.target.value)}/>
                 
-                <label htmlFor="username">ಸೂರ್ಯೋದಯ (Time in AM)</label>
-                <input type="text" id="username"  value={ಸೂರ್ಯೋದಯ} onChange={(e) => setಸೂರ್ಯೋದಯ(e.target.value)}/>
+                {/* <label htmlFor="username">ದಿನಾಂಕ</label> */}
+                {/* <input type="text" id="username"  value={ದಿನಾಂಕ} onChange={(e) => setದಿನಾಂಕ(e.target.value)}/> */}
+                <TextField  id="username"  value={ದಿನಾಂಕ} onChange={(e) => setದಿನಾಂಕ(e.target.value)} variant="outlined" label="ದಿನಾಂಕ"/>
+
+                {/* <label htmlFor="username">ಸಂವತ್ಸರ</label> */}
+                {/* <input type="text" id="username"  value={ಸಂವತ್ಸರ} onChange={(e) => setಸಂವತ್ಸರ(e.target.value)}/> */}
+                <TextField type="text" id="username"  value={ಸಂವತ್ಸರ} onChange={(e) => setಸಂವತ್ಸರ(e.target.value)} variant="outlined" label="ಸಂವತ್ಸರ"/>   
+
+                {/* <label htmlFor="username">ಅಯನಂ</label> */}
+                {/* <input type="text" id="username"  value={ಅಯನಂ} onChange={(e) => setಅಯನಂ(e.target.value)}/> */}
+                <TextField type="text" id="username"  value={ಅಯನಂ} onChange={(e) => setಅಯನಂ(e.target.value)} variant="outlined" label="ಅಯನಂ"/>
+
+                {/* <label htmlFor="username">ಋತು</label> */}
+                {/* <input type="text" id="username"  value={ಋತು} onChange={(e) => setಋತು(e.target.value)}/> */}
+                <TextField type="text" id="username"  value={ಋತು} onChange={(e) => setಋತು(e.target.value)} variant="outlined" label="ಋತು"/>
+
+                {/* <label htmlFor="username">ಮಾಸ</label> */}
+                {/* <input type="text" id="username"  value={ಮಾಸ} onChange={(e) => setಮಾಸ(e.target.value)}/> */}
+                <TextField type="text" id="username"  value={ಮಾಸ} onChange={(e) => setಮಾಸ(e.target.value)} variant="outlined" label="ಮಾಸ"/>
+
+                {/* <label htmlFor="username">ಪಕ್ಷ</label> */}
+                {/* <input type="text" id="username"  value={ಪಕ್ಷ} onChange={(e) => setಪಕ್ಷ(e.target.value)}/> */}
+                <TextField type="text" id="username"  value={ಪಕ್ಷ} onChange={(e) => setಪಕ್ಷ(e.target.value)} variant="outlined" label="ಪಕ್ಷ"/>
+                
+                {/* <label htmlFor="username">ಸೂರ್ಯೋದಯ (Time in AM)</label> */}
+                <TextField type="text" id="username"  value={ಸೂರ್ಯೋದಯ} onChange={(e) => setಸೂರ್ಯೋದಯ(e.target.value)} variant="outlined" label="ಸೂರ್ಯೋದಯ"/>
                
-                <label htmlFor="username">ಸೂರ್ಯಾಸ್ತ(Time in PM)</label>
-                <input type="text" id="username"  value={ಸೂರ್ಯಾಸ್ತ} onChange={(e) => setಸೂರ್ಯಾಸ್ತ(e.target.value)}/>
+                {/* <label htmlFor="username">ಸೂರ್ಯಾಸ್ತ(Time in PM)</label> */}
+                <TextField type="text" id="username"  value={ಸೂರ್ಯಾಸ್ತ} onChange={(e) => setಸೂರ್ಯಾಸ್ತ(e.target.value)} variant="outlined" label="ಸೂರ್ಯಾಸ್ತ"/>
                
-                <label htmlFor="username">ಚಂದ್ರನ ಉದಯ(Time in AM)</label>
-                <input type="text" id="username"  value={ಚಂದ್ರನಉದಯ} onChange={(e) => setಚಂದ್ರನಉದಯ(e.target.value)}/>
+                {/* <label htmlFor="username">ಚಂದ್ರನ ಉದಯ(Time in AM)</label> */}
+                <TextField type="text" id="username"  value={ಚಂದ್ರನಉದಯ} onChange={(e) => setಚಂದ್ರನಉದಯ(e.target.value)} variant="outlined" label="ಚಂದ್ರನ ಉದಯ" />
                 
-                <label htmlFor="username">ಚಂದ್ರಸ್ತ (Time in PM)</label>
-                <input type="text" id="username"  value={ಚಂದ್ರಸ್ತ} onChange={(e) => setಚಂದ್ರಸ್ತ(e.target.value)}/>
+                {/* <label htmlFor="username">ಚಂದ್ರಸ್ತ (Time in PM)</label> */}
+                {/* <input type="text" id="username"  value={ಚಂದ್ರಸ್ತ} onChange={(e) => setಚಂದ್ರಸ್ತ(e.target.value)} variant="outlined"/> */}
                 
-                <label htmlFor="username">ಶುಭ ಸಮಯ (Time in AM)</label>
-                <input type="text" id="username"  value={ಶುಭಸಮಯ} onChange={(e) => setಶುಭಸಮಯ(e.target.value)}/>
+                {/* <label htmlFor="username">ಶುಭ ಸಮಯ (Time in AM)</label> */}
+                <TextField type="text" id="username"  value={ಶುಭಸಮಯ} onChange={(e) => setಶುಭಸಮಯ(e.target.value)} variant="outlined" label="ಶುಭಸಮಯ" />
                 
-                <label htmlFor="username">ರಾಹುಕಾಲ (Time in PM)</label>
-                <input type="text" id="username"  value={ರಾಹುಕಾಲ} onChange={(e) => setರಾಹುಕಾಲ(e.target.value)}/>
+                {/* <label htmlFor="username">ರಾಹುಕಾಲ (Time in PM)</label> */}
+                <TextField type="text" id="username"  value={ರಾಹುಕಾಲ} onChange={(e) => setರಾಹುಕಾಲ(e.target.value)} variant="outlined" label="ರಾಹುಕಾಲ" />
               
-                <label htmlFor="username">ಗುಳಿಕಕಾಲ</label>
-                <input type="text" id="username"  value={ಗುಳಿಕಕಾಲ} onChange={(e) => setಗುಳಿಕಕಾಲ(e.target.value)}/>
+                {/* <label htmlFor="username">ಗುಳಿಕಕಾಲ</label> */}
+                <TextField type="text" id="username"  value={ಗುಳಿಕಕಾಲ} onChange={(e) => setಗುಳಿಕಕಾಲ(e.target.value)} variant="outlined" label="ಗುಳಿಕಕಾಲ" />
                
-                <label htmlFor="username">ಯಮಗಂಡ</label>
-                <input type="text" id="username"  value={ಯಮಗಂಡ} onChange={(e) => setಯಮಗಂಡ(e.target.value)}/>
+                {/* <label htmlFor="username">ಯಮಗಂಡ</label> */}
+                <TextField type="text" id="username"  value={ಯಮಗಂಡ} onChange={(e) => setಯಮಗಂಡ(e.target.value)} variant="outlined" label="ಯಮಗಂಡ" />
                
-                <label htmlFor="username">ತಿಥಿ</label>
-                <input type="text" id="username"  value={ತಿಥಿ} onChange={(e) => setತಿಥಿ(e.target.value)}/>
+                {/* <label htmlFor="username">ತಿಥಿ</label> */}
+                <TextField type="text" id="username"  value={ತಿಥಿ} onChange={(e) => setತಿಥಿ(e.target.value)} variant="outlined" label="ತಿಥಿ" />
                
-                <label htmlFor="username">ರಾಶಿ</label>
-                <input type="text" id="username"  value={ರಾಶಿ} onChange={(e) => setರಾಶಿ(e.target.value)}/>
+                {/* <label htmlFor="username">ರಾಶಿ</label> */}
+                <TextField type="text" id="username"  value={ರಾಶಿ} onChange={(e) => setರಾಶಿ(e.target.value)} variant="outlined" label="ರಾಶಿ" />
 
                 
-                <label htmlFor="username">ನಕ್ಷತ್ರ</label>
-                <input type="text" id="username"  value={ನಕ್ಷತ್ರ} onChange={(e) => setನಕ್ಷತ್ರ(e.target.value)}/>
+                {/* <label htmlFor="username">ನಕ್ಷತ್ರ</label> */}
+                <TextField type="text" id="username"  value={ನಕ್ಷತ್ರ} onChange={(e) => setನಕ್ಷತ್ರ(e.target.value)} variant="outlined" label="ನಕ್ಷತ್ರ" />
 
                 
-                <label htmlFor="username">ಲಗ್ನ</label>
-                <input type="text" id="username"  value={ಲಗ್ನ} onChange={(e) => setಲಗ್ನ(e.target.value)}/>
-                </div>
+                {/* <label htmlFor="username">ಲಗ್ನ</label> */}
+                <TextField type="text" id="username"  value={ಲಗ್ನ} onChange={(e) => setಲಗ್ನ(e.target.value)} variant="outlined" label="ಲಗ್ನ" />
                 
-                <div>
-                <label htmlFor="username">ಮೇಷ</label>
-                <input type="text" id="username"  value={ಮೇಷ} onChange={(e) => setಮೇಷ(e.target.value)}/>
+                
+                
+                {/* <label htmlFor="username">ಮೇಷ</label> */}
+                <TextField type="text" id="username"  value={ಮೇಷ} onChange={(e) => setಮೇಷ(e.target.value)} variant="outlined" label="ಮೇಷ" />
               
-                <label htmlFor="username">ಮಿಥುನ</label>
-                <input type="text" id="username"  value={ಮಿಥುನ} onChange={(e) => setಮಿಥುನ(e.target.value)}/>
+                {/* <label htmlFor="username">ಮಿಥುನ</label> */}
+                <TextField type="text" id="username"  value={ಮಿಥುನ} onChange={(e) => setಮಿಥುನ(e.target.value)} variant="outlined" label="ಮಿಥುನ" />
               
-                <label htmlFor="username">ಸಿಂಹ</label>
-                <input type="text" id="username"  value={ಸಿಂಹ} onChange={(e) => setಸಿಂಹ(e.target.value)}/>
+                {/* <label htmlFor="username">ಸಿಂಹ</label> */}
+                <TextField type="text" id="username"  value={ಸಿಂಹ} onChange={(e) => setಸಿಂಹ(e.target.value)} variant="outlined" label="ಸಿಂಹ" />
                
-                <label htmlFor="username">ತುಲಾ</label>
-                <input type="text" id="username"  value={ತುಲಾ} onChange={(e) => setತುಲಾ(e.target.value)}/>
+                {/* <label htmlFor="username">ತುಲಾ</label> */}
+                <TextField type="text" id="username"  value={ತುಲಾ} onChange={(e) => setತುಲಾ(e.target.value)} variant="outlined" label="ತುಲಾ" />
                
-                <label htmlFor="username">ಧನು</label>
-                <input type="text" id="username"  value={ಧನು} onChange={(e) => setಧನು(e.target.value)}/>
+                {/* <label htmlFor="username">ಧನು</label> */}
+                <TextField type="text" id="username"  value={ಧನು} onChange={(e) => setಧನು(e.target.value)} variant="outlined" label="ಧನು" />
                
-                <label htmlFor="username">ಕುಂಭ</label>
-                <input type="text" id="username"  value={ಕುಂಭ} onChange={(e) => setಕುಂಭ(e.target.value)}/>
+                {/* <label htmlFor="username">ಕುಂಭ</label> */}
+                <TextField type="text" id="username"  value={ಕುಂಭ} onChange={(e) => setಕುಂಭ(e.target.value)} variant="outlined" label="ಕುಂಭ" />
                 
                
                 
-                <label htmlFor="username">ವೃಷಭ</label>
-                <input type="text" id="username"  value={ವೃಷಭ} onChange={(e) => setವೃಷಭ(e.target.value)}/>
+                {/* <label htmlFor="username">ವೃಷಭ</label> */}
+                <TextField type="text" id="username"  value={ವೃಷಭ} onChange={(e) => setವೃಷಭ(e.target.value)} variant="outlined" label="ವೃಷಭ" />
                 
-                <label htmlFor="username">ಕರ್ಕಾಟಕ</label>
-                <input type="text" id="username"  value={ಕರ್ಕಾಟಕ} onChange={(e) => setಕರ್ಕಾಟಕ(e.target.value)}/>
+                {/* <label htmlFor="username">ಕರ್ಕಾಟಕ</label> */}
+                <TextField type="text" id="username"  value={ಕರ್ಕಾಟಕ} onChange={(e) => setಕರ್ಕಾಟಕ(e.target.value)} variant="outlined" label="ಕರ್ಕಾಟಕ" />
               
-                <label htmlFor="username">ಕನ್ಯಾ</label>
-                <input type="text" id="username"  value={ಕನ್ಯಾ} onChange={(e) => setಕನ್ಯಾ(e.target.value)}/>
+                {/* <label htmlFor="username">ಕನ್ಯಾ</label> */}
+                <TextField type="text" id="username"  value={ಕನ್ಯಾ} onChange={(e) => setಕನ್ಯಾ(e.target.value)} variant="outlined" label="ಕನ್ಯಾ" />
                
-                <label htmlFor="username">ವೃಶ್ಚಿಕ</label>
-                <input type="text" id="username"  value={ವೃಶ್ಚಿಕ} onChange={(e) => setವೃಶ್ಚಿಕ(e.target.value)}/>
+                {/* <label htmlFor="username">ವೃಶ್ಚಿಕ</label> */}
+                <TextField type="text" id="username"  value={ವೃಶ್ಚಿಕ} onChange={(e) => setವೃಶ್ಚಿಕ(e.target.value)} variant="outlined" label="ವೃಶ್ಚಿಕ" />
                 
-                <label htmlFor="username">ಮಕರ</label>
-                <input type="text" id="username"  value={ಮಕರ} onChange={(e) => setಮಕರ(e.target.value)}/>
+                {/* <label htmlFor="username">ಮಕರ</label> */}
+                <TextField type="text" id="username"  value={ಮಕರ} onChange={(e) => setಮಕರ(e.target.value)} variant="outlined" label="ಮಕರ" />
                
-                <label htmlFor="username">ಮೀನ</label>
-                <input type="text" id="username"  value={ಮೀನ} onChange={(e) => setಮೀನ(e.target.value)}/>
-                </div>
+                {/* <label htmlFor="username">ಮೀನ</label> */}
+                <TextField type="text" id="username"  value={ಮೀನ} onChange={(e) => setಮೀನ(e.target.value)} variant="outlined" label="ಮೀನ" />
+                
 
                
             </form>
