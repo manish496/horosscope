@@ -77,8 +77,8 @@ form {
     background-color: orange;
     display: flex;
     justify-content: space-between;
-    padding-left: 1rem;
-    padding-right: 2rem;
+    padding-left: 20px;
+    padding-right: 1rem;
     align-items: center;
     gap: 2rem;
 }
