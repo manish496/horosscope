@@ -189,7 +189,7 @@ export const Form = () => {
             </form>
              <button onClick={convertPng} className="button">Submit</button>
 
-            <div className="profile" ref={divRef} style={{ width: "600px", height: "1080px" }}>
+            <div className="profile" ref={divRef} style={{ width: "600px", height: "1090px" }}>
                 <div className="today">
                     ಇಂದಿನ ಪಂಚಾಂಗ
                 </div>
