@@ -1,0 +1,166 @@
+form {
+    background-color: aquamarine;
+    box-sizing: border-box;
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem;
+    padding-bottom: 1rem;
+    justify-items: center;
+    }
+
+form > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}    
+
+input {
+    /* padding-left: 5rem ; */
+    padding-right: 1rem ;
+}
+
+label {
+    width: 100%;
+    /* background-color: azure; */
+    text-align: start;
+    align-self: self-start;
+}
+
+.profile {
+    width: 609px;
+    height: 1080px;
+    /* margin: 0 auto; */
+    background-image: url('../assets/DailyHoroscope.jpg');
+    background-repeat: no-repeat;
+}
+
+.today {
+    padding-top: 7rem;
+    text-align: center;
+    color: brown;
+    font-weight: bolder;
+}
+
+.today-info {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 100px 20px 500px ;
+}
+
+.sun {
+    background-color: maroon;
+    display: grid;
+    grid-template-columns: 120px 90px 50px 90px;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    color: white;
+    margin-right:3px;
+}
+
+.dash {
+    font-size: 1.1rem;
+}
+.moon {
+    margin: 1rem 1px 0px 1px;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 130px 90px 40px 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    color: white;
+}
+
+.web {
+    font-size: larger;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 0.75rem;
+    font-family: sans-serif;
+}
+
+.good-bad {
+    margin: 1rem 4px 0px 3px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.good-bad div {
+    display: flex;
+    margin: 0px 1px 0px 1px;
+    width: 100%;
+    gap: 1rem;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+.time {
+    margin: 1rem 4px 0px 2px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.time div {
+    display: flex;
+    gap: 1rem;
+}
+
+.rashi {
+    background-color: maroon;
+    color: white;
+    margin: 1rem 2px 0px 1px;
+    text-align: center;
+}
+
+
+.future {
+    margin: 1rem 3px 0px 2px;
+    padding-left: 1rem;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.one-rashi {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+}
+
+.button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.one-rashi > div{
+    line-height: 2.5rem;
+}
+
+.second-rashi > div {
+    line-height: 2.5rem;
+}
+
+.second-rashi {
+    display: grid;
+    grid-template-columns: 1fr 50px 100px;
+}
+
+
+
